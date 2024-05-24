@@ -6,12 +6,13 @@ import { Canvas } from '@react-three/fiber'
 import CustomLoader from './components/CustomLoader'
 import Bridge from './models/Bridge'
 import { Html } from '@react-three/drei';
+import React from 'react'
 
 function App() {
   const [isRotating, setIsRotating] = useState(false);
   const [, setCurrentStage] = useState<number|null>(1);
   const adjustBridgeForScreenSize = () => {
-    let screenScale = null
+    let screenScale
     const screenPosition = [0, 0, -35]
     const rotation = [2, 3.15, 11]
     if(window.innerWidth < 768) {
